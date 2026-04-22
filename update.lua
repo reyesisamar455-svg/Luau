@@ -1,1 +1,4 @@
-print("actualización en vivo")
+{
+    "Daño": 50,
+    "Version": 1.2
+}
