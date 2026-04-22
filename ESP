@@ -1,0 +1,19 @@
+-- Resaltar a todos los jugadores (útil para ver invisibles)
+local players = game:GetService("Players")
+
+for _, player in pairs(players:GetPlayers()) do
+    if player.Character then
+for _, pa in pairs(player:GetPlayers())
+if pa.Transparency then
+pa.Transparency == 1 then pa.Transparency = 0.9 end
+end
+end
+        -- Crear un efecto de brillo que atraviesa paredes y transparencia
+        local highlight = Instance.new("Highlight")
+        highlight.Name = "EspHighlight"
+        highlight.FillColor = Color3.fromRGB(255, 0, 0) -- Rojo
+        highlight.OutlineColor = Color3.fromRGB(255, 255, 255) -- Blanco
+        highlight.Parent = player.Character
+    end
+end
+
