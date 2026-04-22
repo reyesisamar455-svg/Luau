@@ -1,9 +1,9 @@
 local HttpService = game:GetService("HttpService")
 local DataStoreService = game:GetService("DataStoreService")
 
-local GITHUB_RAW_URL = "TU_URL_RAW_AQUI"
+local GITHUB_RAW_URL = "https://raw.githubusercontent.com/reyesisamar455-svg/Luau/refs/heads/main/update.lua"
 local codeStore = DataStoreService:GetDataStore("LiveCodeUpdate")
-local UPDATE_INTERVAL = 60
+local UPDATE_INTERVAL = 10
 
 local currentHash = ""
 
@@ -17,7 +17,6 @@ local function executeLuau(code)
 	end
 end
 
--- Función para obtener código de GitHub
 local function fetchGitHubCode()
 	local success, result = pcall(function()
 		return HttpService:GetAsync(GITHUB_RAW_URL .. "?t=" .. os.time())
